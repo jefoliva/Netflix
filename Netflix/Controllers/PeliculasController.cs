@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Netflix.Models;
+using Netflix.ViewModels;
 using EstructurasDeDatos.Lista;
 
 namespace Netflix.Controllers
@@ -23,15 +24,31 @@ namespace Netflix.Controllers
 
         public ActionResult Nueva()
         {
-            return View("PeliculaForm");
+            var viewModel = new PeliculasFormViewModel
+            {
+                Generos = Datos.Generos
+            };
+
+            return View("PeliculasForm", viewModel);
         }
 
         [HttpPost]
-        /*public ActionResult Agregar(Pelicula pelicula)
+        public ActionResult Guardar(Pelicula pelicula)
         {
             if(!ModelState.IsValid)
+            {
+                var viewModel = new PeliculasFormViewModel
+                {
+                    Generos = Datos.Generos
+                };
 
-        } */
+                return View("PeliculasForm", viewModel);
+            }
+
+            Datos.tvniños.Agregar(pelicula);
+
+            return RedirectToAction("Index", "Peliculas");
+        }
 
         public ActionResult Reproducir(int id)
         {
