@@ -1,0 +1,37 @@
+﻿@model Netflix.Models.Pelicula
+
+@{
+    ViewBag.Title = "Reproducir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reproducir</h2>
+
+<div class="container">
+   <div class="row">
+       <div class="col-md-5">
+           <h3>@Model.Nombre</h3>
+           <ul>
+               <li><strong>Genero</strong>: @Model.Genero</li>
+               <li><strong>Fecha De Lanzamiento</strong>: @Model.FechaDeLanzamiento</li>
+               <li><strong>Descripcion</strong>: @Model.Descripcion</li>
+           </ul>
+       </div>
+       <div class="col-md-7 bg-black">
+           hey
+       </div>
+   </div> 
+    @Html.ActionLink("Anterior", "Reproducir", new { Id = Model.Id + 1 }, new { @class = "btn btn-success" })
+    @Html.ActionLink("+ Agregar a mi lista", "AgregarMiLista", new { Id = Model.Id + 1}, new { @class = "btn btn-success", id = "js-agregar-lista"})
+</div>
+
+@section scripts {
+    <script>
+        /*
+        $("#js-agregar-lista").on("click", function (e) {
+            e.preventDefault();
+            $(this).removeClass().addClass("btn btn-danger").text("Quitar de mi lista");
+        })
+        */
+    </script>    
+}

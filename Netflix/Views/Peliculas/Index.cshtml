@@ -1,0 +1,21 @@
+﻿@using Netflix.Models;
+@model EstructurasDeDatos.Lista.ListaDoble<Pelicula>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="container">
+    <h2>TV para niños</h2>
+    <ul>
+    @foreach(var pelicula in Model)
+    {
+        <li>
+            @Html.ActionLink(pelicula.Nombre, "Reproducir", new { Id = pelicula.Id}, new { @Class = "btn btn-link" } )
+        </li>
+    }
+    </ul>
+</div>
+
