@@ -1,0 +1,191 @@
+[
+    {
+        "id": 1,
+        "nombre": "Plaza Sessamo",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 0,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "~/img/img01.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Peppa Pig",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 0,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Muppets",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 0,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Looney Tunes",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 0,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Tom y Jerry",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 0,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Adventure Time",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 0,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Nancy Fancy",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 0,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Gone Girl",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 1,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "~/img/img01.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Rain Man",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 1,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Gone with the wind",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 1,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Eye Wide Slut",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 1,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "La naranja mecanica",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 1,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 13,
+        "nombre": "Eterno Resplandor de una mente sin recuerdos",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 1,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 14,
+        "nombre": "Ragging Bull",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 1,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 15,
+        "nombre": "Mision Imposible",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 2,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "~/img/img01.jpg"
+    },
+    {
+        "id": 16,
+        "nombre": "Pulp Fiction",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 2,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 17,
+        "nombre": "Reservoir Dogs",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 2,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 18,
+        "nombre": "Kill Bill",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 2,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 19,
+        "nombre": "Whiplash",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 2,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 20,
+        "nombre": "Fight Club",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 2,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    },
+    {
+        "id": 21,
+        "nombre": "Se7en",
+        "añoDeLanzamiento": "2018",
+        "genero": null,
+        "generoId": 2,
+        "descripcion": "Lorem Ipsum Dolor",
+        "urlImagen": "/img/img01.jpg"
+    }
+]

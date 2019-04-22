@@ -1,0 +1,33 @@
+﻿@model Netflix.ViewModels.PeliculasFormViewModel
+
+@{
+    ViewBag.Title = "PeliculasForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Agregar Pelicula</h2>
+
+@using (Html.BeginForm("Guardar", "Peliculas"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pelicula.Nombre)
+        @Html.TextBoxFor(m => m.Pelicula.Nombre, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Pelicula.Nombre)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pelicula.AñoDeLanzamiento)
+        @Html.TextBoxFor(m => m.Pelicula.AñoDeLanzamiento, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Pelicula.AñoDeLanzamiento)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pelicula.GeneroId)
+        @Html.DropDownListFor(m => m.Pelicula.GeneroId, new SelectList(Model.Generos, "Id", "GeneroNombre"), "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Pelicula.GeneroId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pelicula.Descripcion)
+        @Html.TextAreaFor(m => m.Pelicula.Descripcion, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Pelicula.Descripcion)
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+}

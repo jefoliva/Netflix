@@ -20,7 +20,6 @@ namespace Netflix.Models
         [Display(Name = "Año de lanzamiento")]
         public string AñoDeLanzamiento{ get; set;}
 
-        [Required]
         public Genero Genero { get; set; }
 
         [Display(Name = "Genero")]
@@ -31,19 +30,26 @@ namespace Netflix.Models
 
         public string urlImagen { get; set; }
 
-        /* public string GetGenero()
+        public string GetGenero()
         {
-            switch(Genero)
+            switch(GeneroId)
             {
-                case TiposDeGenero.TvParaNiños:
+                case 0:
                     return "Tv para niños";
-                case TiposDeGenero.Drama:
+                case 1:
                     return "Drama";
-                case TiposDeGenero.AccionYAventuras:
+                case 2:
                     return "Accion y Aventura";
             }
 
             return "";
-        } */
+        }
+
+        public override bool Equals(object obj)
+        {
+            Pelicula x = (Pelicula) obj;
+
+            return this.Id == x.Id;
+        }
     }
 }

@@ -1,22 +1,129 @@
 ﻿@using Netflix.Models;
-@model EstructurasDeDatos.Lista.ListaDoble<Pelicula>
+@using EstructurasDeDatos.Lista
+    @model  Netflix.ViewModels.IndexViewModel
 
-@{
-    ViewBag.Title = "Index";
-}
-
-
-
-<div class="container">
-    @Html.ActionLink("Agregar Pelicula", "Nueva", null, new { @class = "btn btn-success" })
-    <h2>TV para niños</h2>
-    <ul>
-    @foreach(var pelicula in Model)
-    {
-        <li>
-            @Html.ActionLink(pelicula.Nombre, "Reproducir", new { Id = pelicula.Id}, new { @Class = "btn btn-link" } )
-        </li>
+    @{
+        ViewBag.Title = "Index";
     }
-    </ul>
-</div>
 
+
+
+    <div class="container">
+        
+
+        @Html.ActionLink("Agregar Pelicula", "Nueva", null, new { @class = "btn btn-success" })
+        <h2>TV para niños</h2>
+
+      
+        <ul>
+            @if(!Model.TvNiños.Any()) {
+                <li>No hay peliculas por el momento</li>
+            }
+            else
+            {
+                foreach (var pelicula in Model.TvNiños)
+                {
+
+                    <li>
+                        @Html.ActionLink(pelicula.Nombre, "Reproducir", new { Id = pelicula.Id }, new { @Class = "btn btn-link" })
+                    </li>
+    
+                }
+            }
+        </ul>
+
+        <h2>Drama</h2>
+        <ul>
+            @foreach (var pelicula in Model.Drama)
+            {
+                <li>
+                    @Html.ActionLink(pelicula.Nombre, "Reproducir", new { Id = pelicula.Id }, new { @Class = "btn btn-link" })
+                </li>
+            }
+        </ul>
+
+        <h2>Accion y Aventuras</h2>
+        <ul>
+            @foreach (var pelicula in Model.AccionyAventuras)
+            {
+                <li>
+                    @Html.ActionLink(pelicula.Nombre, "Reproducir", new { Id = pelicula.Id }, new { @Class = "btn btn-link" })
+                </li>
+            }
+        </ul>
+
+        <h2>Continua Viendo Contenido de Usuario <small>continuar</small></h2>
+
+        <ul>
+            @if (!Model.ContinuarViendo.Any())
+            {
+                <li>Aún no hay nada en Continuar Viendo</li>
+            }
+            else
+            {
+                @Html.ActionLink("Continuar Viendo", "PopContinuarViendo", null, new { @class = "btn btn-primary" })
+                foreach (var pelicula in Model.ContinuarViendo)
+                {
+                    <li>
+                        @pelicula.Nombre
+                    </li>
+                }
+            }
+
+        </ul>
+
+        <h2>Mi Lista</h2>
+       
+        <ul>
+            @if(!Model.MiLista.Any())
+            {
+                <li>Aún no hay nada en Mi Lista</li>
+            }
+            else
+            {
+                @Html.ActionLink("Ver pelicula de mi Lista", "VerDeMiLista", null, new { @class = "btn btn-primary" })
+                foreach (var pelicula in Model.MiLista)
+                {
+                    <li>
+                        @Html.ActionLink(pelicula.Nombre, "#", null, new { @Class = "btn btn-link" })
+                    </li>
+                }
+            }
+           
+        </ul>
+
+        <div class="form-group">
+            <label>Search movies:</label>
+            <input type="text" id="my_search" data-provider="typeahead" class="form-control" name="search" autocomplete="off" />
+        </div>
+
+    </div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            var peliculas = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('nombre'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                prefetch: {
+                    url: '/api/Peliculas',
+                    cache: false
+                }
+            });
+
+            peliculas.initialize();
+
+            $('#my_search').typeahead({
+                highlight: true
+            },
+            {
+                name: 'peliculas',
+                display: 'nombre',
+                source: peliculas.ttAdapter()
+            });
+
+        });  
+       
+    </script>
+}

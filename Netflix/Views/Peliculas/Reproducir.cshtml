@@ -1,4 +1,4 @@
-﻿@model Netflix.Models.Pelicula
+﻿@model Netflix.ViewModels.ReproducirViewModel
 
 @{
     ViewBag.Title = "Reproducir";
@@ -10,28 +10,66 @@
 <div class="container">
    <div class="row">
        <div class="col-md-5">
-           <h3>@Model.Nombre</h3>
+           <h3>@Model.Pelicula.Nombre</h3>
            <ul>
-               <li><strong>Genero</strong>: @Model.Genero.GeneroNombre</li>
-               <li><strong>Fecha De Lanzamiento</strong>: @Model.AñoDeLanzamiento</li>
-               <li><strong>Descripcion</strong>: @Model.Descripcion</li>
+               <li><strong>Genero</strong>: @Model.Pelicula.GetGenero()</li>
+               <li><strong>Fecha De Lanzamiento</strong>: @Model.Pelicula.AñoDeLanzamiento</li>
+               <li><strong>Descripcion</strong>: @Model.Pelicula.Descripcion</li>
            </ul>
        </div>
-       <div class="col-md-7 bg-black">
-           hey
+       <div class="col-md-7">
+           <video src="" width="100%" poster="/img/img01.jpg" autoplay controls ></video>
        </div>
    </div> 
-    @Html.ActionLink("Anterior", "Reproducir", new { Id = Model.Id + 1 }, new { @class = "btn btn-success" })
-    @Html.ActionLink("+ Agregar a mi lista", "AgregarMiLista", new { Id = Model.Id + 1}, new { @class = "btn btn-success", id = "js-agregar-lista"})
+    @Html.ActionLink("+ Agregar a mi lista", "AgregarMiLista", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-success", id = "js-agregar-lista" })
+    @Html.ActionLink("- Eliminar pelicula", "Eliminar", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-danger", id = "js-remover-lista" })
+    @Html.ActionLink("+ Agregar a Continuar Viendo", "PushContinuarViendo", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-warning", id = "js-continuar-viendo" })
+    @Html.ActionLink("Finalizar", "Finalizar", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-info"})
+   
+    @Html.HiddenFor(m => m.Pelicula.Id)
+    @Html.Hidden("estaEnMiLista", Model.EstaEnMiLista, new { id = "estaEnMiLista" })
+    @Html.Hidden("estaContinuarViendo", Model.EstaContinuarViendo, new { id = "estaContinuarViendo" })
 </div>
 
 @section scripts {
     <script>
-        /*
-        $("#js-agregar-lista").on("click", function (e) {
-            e.preventDefault();
-            $(this).removeClass().addClass("btn btn-danger").text("Quitar de mi lista");
-        })
-        */
+        
+        
+        $(function () {
+            var estaEnMiListaInput = $("#estaEnMiLista");
+            var estaContinuarViendoInput = $("#estaContinuarViendo");
+
+            var agregarListaButton = $("#js-agregar-lista");
+            var continuarViendoButton = $("#js-continuar-viendo");
+
+           if (estaEnMiListaInput.attr("value") === "True") {
+               agregarListaButton.addClass("disabled");
+               agregarListaButton.text("Agregado a mi lista");
+           }
+
+           if (estaContinuarViendoInput.attr("value") === "True") {
+               continuarViendoButton.addClass("disabled");
+           }
+            
+           $(continuarViendoButton).on("click", function (e) {
+               e.preventDefault();
+               button = $(this);
+
+               $.ajax({
+                   url: "/Peliculas/PushContinuarViendo/" + $("#Pelicula_Id").attr("value"),
+                   method: "GET",
+                   success: function () {
+                       button.addClass("disabled");
+                   }
+               })
+           });
+
+           /* $("#js-agregar-lista").on("click", function (e) {
+                e.preventDefault();
+                $(this).removeClass().addClass("btn btn-danger").text("Quitar de mi lista");
+            })
+            */
+        });
+        
     </script>    
 }

@@ -23,6 +23,21 @@ textarea {
     max-width: 280px;
 }
 
-.bg-black {
-    background-color: black;
+.bg-black, video {
+    background-color: darkgrey;
+    height: 400px;
+}
+
+.bg-black:hover {
+    z-index: 10;
+    background-color: white;
+    opacity: 0.40;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+.input-validation-error {
+    border: red 1px solid;
 }
