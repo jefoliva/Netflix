@@ -206,6 +206,8 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
     <Content Include="Content\typeahead.css" />
@@ -272,9 +274,11 @@
     <Content Include="img\8-portada.jpg" />
     <Content Include="img\9-fondo.jpg" />
     <Content Include="img\9-portada.jpg" />
+    <Content Include="img\film-icon.jpg" />
     <Content Include="img\img01.jpg" />
     <Content Include="Data\data.json" />
     <Content Include="img\Netflix.png" />
+    <Content Include="img\video-loading.png" />
     <Content Include="Scripts\bloodhound.js" />
     <Content Include="Scripts\bloodhound.min.js" />
     <Content Include="Scripts\bootbox.js" />
@@ -303,6 +307,12 @@
     <Content Include="Scripts\esm\popper-utils.js.map" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

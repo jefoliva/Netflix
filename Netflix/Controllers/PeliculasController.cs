@@ -53,6 +53,9 @@ namespace Netflix.Controllers
             }
 
             pelicula.Id = Datos.peliculas.Max(p => p.Id) + 1;
+            pelicula.Duracion = "1h 30m";
+            pelicula.PortadaURL = "/img/film-icon.jpg";
+            pelicula.FondoURL = "/img/video-loading.png";
 
             if (pelicula.GeneroId == 0)
                 Datos.tvniños.Agregar(pelicula);
@@ -136,7 +139,7 @@ namespace Netflix.Controllers
             return RedirectToAction("Index");
         }
 
-
+        [HttpDelete]
         public ActionResult Eliminar(int id)
         {
             var pelicula = Datos.peliculas.Single(p => p.Id == id);

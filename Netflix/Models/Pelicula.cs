@@ -16,11 +16,18 @@ namespace Netflix.Models
         public string Nombre { get; set; }
 
         [Required]
+        public string Director { get; set; }
+
+        [Required]
         [RegularExpression("\\d{4}", ErrorMessage = "Entrada Invalida")]
         [Display(Name = "Año de lanzamiento")]
-        public string AñoDeLanzamiento{ get; set;}
+        public string AñoDeLanzamiento { get; set; }
 
-        public Genero Genero { get; set; }
+        public string Duracion { get; set; }
+
+        [Required]
+        [Range(1, 5, ErrorMessage = "Calificaion debe estar entre 1 y 5")]
+        public int Calificacion { get; set; }
 
         [Display(Name = "Genero")]
         public byte GeneroId { get; set; }
@@ -28,7 +35,8 @@ namespace Netflix.Models
         [Required]
         public string Descripcion { get; set; }
 
-        public string urlImagen { get; set; }
+        public string PortadaURL { get; set; }
+        public string FondoURL { get; set; }
 
         public string GetGenero()
         {

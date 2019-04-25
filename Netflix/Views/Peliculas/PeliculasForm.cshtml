@@ -5,29 +5,72 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Agregar Pelicula</h2>
 
-@using (Html.BeginForm("Guardar", "Peliculas"))
-{
-    <div class="form-group">
-        @Html.LabelFor(m => m.Pelicula.Nombre)
-        @Html.TextBoxFor(m => m.Pelicula.Nombre, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Pelicula.Nombre)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Pelicula.AñoDeLanzamiento)
-        @Html.TextBoxFor(m => m.Pelicula.AñoDeLanzamiento, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Pelicula.AñoDeLanzamiento)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Pelicula.GeneroId)
-        @Html.DropDownListFor(m => m.Pelicula.GeneroId, new SelectList(Model.Generos, "Id", "GeneroNombre"), "", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Pelicula.GeneroId)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Pelicula.Descripcion)
-        @Html.TextAreaFor(m => m.Pelicula.Descripcion, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Pelicula.Descripcion)
-    </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
-}
+
+<div class="container justify-content-center custom-form">
+
+    <h2 class="text-center font-weight-bold pb-4 text-muted">AGREGAR PELICULA</h2>
+    @using (Html.BeginForm("Guardar", "Peliculas", FormMethod.Post, new { id = "justify-content-center" }))
+    {
+        <div class="row">
+            <div class="col-md-4 col-sm-8 offset-md-4">
+                <div class="form-group">
+                    <!-- @Html.LabelFor(m => m.Pelicula.Nombre) -->
+                    @Html.TextBoxFor(m => m.Pelicula.Nombre, new { @class = "form-control", placeholder="Nombre" })
+                    @Html.ValidationMessageFor(m => m.Pelicula.Nombre)
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-8 offset-md-4">
+                <div class="form-group">
+                    <!--- @Html.LabelFor(m => m.Pelicula.Director) -->
+                    @Html.TextBoxFor(m => m.Pelicula.Director, new { @class = "form-control", placeholder = "Director" })
+                    @Html.ValidationMessageFor(m => m.Pelicula.Director)
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-8 offset-md-4">
+                <div class="form-group">
+                    <!--  @Html.LabelFor(m => m.Pelicula.Calificacion) -->
+                    @Html.TextBoxFor(m => m.Pelicula.Calificacion, new { @class = "form-control", placeholder = "Calificacion (1-5)" })
+                    @Html.ValidationMessageFor(m => m.Pelicula.Calificacion)
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-8 offset-md-4">
+                <div class="form-group">
+                    <!-- @Html.LabelFor(m => m.Pelicula.AñoDeLanzamiento) --> 
+                    @Html.TextBoxFor(m => m.Pelicula.AñoDeLanzamiento, new { @class = "form-control", placeholder = "Año de Lanzamiento" })
+                    @Html.ValidationMessageFor(m => m.Pelicula.AñoDeLanzamiento)
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-8 offset-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Pelicula.GeneroId)
+                    @Html.DropDownListFor(m => m.Pelicula.GeneroId, new SelectList(Model.Generos, "Id", "GeneroNombre"), "", new { @class = "form-control", placeholder = "Selecciona Genero" })
+                    @Html.ValidationMessageFor(m => m.Pelicula.GeneroId)
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-8 offset-md-4">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Pelicula.Descripcion)
+                    @Html.TextAreaFor(m => m.Pelicula.Descripcion, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Pelicula.Descripcion)
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-8 offset-md-4">
+                <button type="submit" class="btn btn-danger btn-block">Guardar</button>
+            </div>
+        </div>  
+       
+    }
+</div>

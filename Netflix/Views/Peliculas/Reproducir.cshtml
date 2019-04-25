@@ -5,26 +5,56 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Reproducir</h2>
 
-<div class="container">
+
+<div class="container-fluid reproductor pl-4 pr-4">
    <div class="row">
-       <div class="col-md-5">
-           <h3>@Model.Pelicula.Nombre</h3>
-           <ul>
-               <li><strong>Genero</strong>: @Model.Pelicula.GetGenero()</li>
-               <li><strong>Fecha De Lanzamiento</strong>: @Model.Pelicula.AñoDeLanzamiento</li>
-               <li><strong>Descripcion</strong>: @Model.Pelicula.Descripcion</li>
-           </ul>
+       <div class="col-md-4 pl-4">
+           <h2 class="reproducir-nombre">@Model.Pelicula.Nombre</h2>
+           
+           <div class="detalles">
+               <span class="calificacion">
+                   @{
+                       var counter = (int)Model.Pelicula.Calificacion;
+
+                       for (int i = 0; i < 5; i++)
+                       {
+                           if (counter > 0)
+                           {
+                               <i class="fa fa-star checked"></i>
+                               counter--;
+                           }
+                           else
+                           {
+                               <i class="fa fa-star unchecked"></i>
+                           }
+                       }
+                   }
+               </span>
+               <span class="año text-muted font-weight-bold pr-2 pl-2">@Model.Pelicula.AñoDeLanzamiento</span>
+               <span class="año text-muted font-weight-bold pr-2 pl-2 border border-secondary">@Model.Pelicula.Duracion</span>
+              
+           </div>
+           <div class="descripcion">
+               <p class="text-white-50 mt-4">@Model.Pelicula.Descripcion</p>
+               <span class="d-block"><span class="text-white-50">Director: </span>@Model.Pelicula.Director</span>
+               <span class="d-block"><span class="text-white-50">Genero: </span>@Model.Pelicula.GetGenero()</span>
+               <span class="d-block"><span class="text-white-50">Duracion: </span>@Model.Pelicula.Duracion</span>
+             
+           </div>
+           <div class="mt-3">
+               @Html.ActionLink("+ Agregar a mi lista", "AgregarMiLista", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-outline-light", id = "js-agregar-lista" })
+               @Html.ActionLink("+ Agregar a Continuar Viendo", "PushContinuarViendo", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-outline-light", id = "js-continuar-viendo" })
+           </div>
+           
        </div>
-       <div class="col-md-7">
-           <video src="" width="100%" poster="/img/img01.jpg" autoplay controls ></video>
+       <div class="col-md-8">
+           <video src="" width="100%" poster="@Model.Pelicula.FondoURL" autoplay controls ></video>
+        @Html.ActionLink("Finalizar", "Finalizar", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-outline-light mr-2" } )
+        @Html.ActionLink("- Eliminar pelicula", "Eliminar", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-outline-danger", id = "jseliminar" })
        </div>
    </div> 
-    @Html.ActionLink("+ Agregar a mi lista", "AgregarMiLista", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-success", id = "js-agregar-lista" })
-    @Html.ActionLink("- Eliminar pelicula", "Eliminar", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-danger", id = "js-remover-lista" })
-    @Html.ActionLink("+ Agregar a Continuar Viendo", "PushContinuarViendo", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-warning", id = "js-continuar-viendo" })
-    @Html.ActionLink("Finalizar", "Finalizar", new { Id = Model.Pelicula.Id }, new { @class = "btn btn-info"})
+    
    
     @Html.HiddenFor(m => m.Pelicula.Id)
     @Html.Hidden("estaEnMiLista", Model.EstaEnMiLista, new { id = "estaEnMiLista" })
@@ -32,9 +62,9 @@
 </div>
 
 @section scripts {
+    @Scripts.Render("~/bundles/bootbox")
+
     <script>
-        
-        
         $(function () {
             var estaEnMiListaInput = $("#estaEnMiLista");
             var estaContinuarViendoInput = $("#estaContinuarViendo");
@@ -49,6 +79,7 @@
 
            if (estaContinuarViendoInput.attr("value") === "True") {
                continuarViendoButton.addClass("disabled");
+               continuarViendoButton.text("Agregado a Continuar Viendo");
            }
             
            $(continuarViendoButton).on("click", function (e) {
@@ -60,16 +91,32 @@
                    method: "GET",
                    success: function () {
                        button.addClass("disabled");
+                       continuarViendoButton.text("Agregado a Continuar Viendo");
                    }
                })
            });
 
-           /* $("#js-agregar-lista").on("click", function (e) {
-                e.preventDefault();
-                $(this).removeClass().addClass("btn btn-danger").text("Quitar de mi lista");
-            })
-            */
+
+
+        // Desplegar ventana modal de bootbox al dar click en el boton Eliminar
+           $("#jseliminar").on("click", function (e) {
+               e.preventDefault();
+               var button = $(this);
+
+               bootbox.confirm("Esta seguro que quiere eliminar esta pelicula?", function (result) {
+                   if (result) {
+                       $.ajax({
+                           url: "/Peliculas/Eliminar/" + $("#Pelicula_Id").val(),
+                           method: "DELETE",
+                           success: function () {
+                               location.href = "/Peliculas/"
+                           }
+                       });
+                   }
+               });
+
+           });
+
         });
-        
-    </script>    
+    </script>
 }

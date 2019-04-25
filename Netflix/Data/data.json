@@ -1,191 +1,302 @@
 [
     {
         "id": 1,
-        "nombre": "Plaza Sessamo",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "Alvin y las Ardillas",
+        "director": "Tim Hill",
+        "calificacion": 4,
+        "duracion": "1h 32 m",
+        "añoDeLanzamiento": "2007",
         "generoId": 0,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "~/img/img01.jpg"
+        "descripcion": "Después de probar suerte con un desesperanzado compositor, tres ardillas muy peculiares, Alvin, Simon y Theodore, deciden convencer a Dave de que pueden cantar."
     },
     {
         "id": 2,
-        "nombre": "Peppa Pig",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "Bob Esponja",
+        "director": "Stephen Hillenburg, Mark Osborne",
+        "calificacion": 5,
+        "duracion": "1h 27m",
+        "añoDeLanzamiento": "2004",
         "generoId": 0,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "Bob Esponja y Patrick viajan a ciudad Shell para recuperar la corona de Neptuno y salvar la vida del Sr. Krabs."
     },
     {
         "id": 3,
-        "nombre": "Muppets",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "El Rey Leon",
+        "director": "Roger Allers, Rob Minkoff",
+        "calificacion": 4,
+        "duracion": "1h 29m",
+        "añoDeLanzamiento": "1994",
         "generoId": 0,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "Tras la muerte de su padre, Simba vuelve a enfrentar a su malvado tío, Scar, y reclamar el trono de rey."
     },
     {
         "id": 4,
-        "nombre": "Looney Tunes",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "Frozen",
+        "director": "Jennifer Lee, Chris Buck",
+        "calificacion": 3,
+        "duracion": "1h 49m",
+        "añoDeLanzamiento": "2013",
         "generoId": 0,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "Una profecía condena al reino de Arandelle a vivir en un invierno eterno. La joven Anna, el temerario montañero Kristoff y el reno Sven deben emprender un viaje épico y lleno de aventuras en busca de Elsa, la hermana de Anna y Reina de las Nieves. Ella es la única que puede poner fin al gélido hechizo."
     },
     {
         "id": 5,
-        "nombre": "Tom y Jerry",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "Locos Por El Surf",
+        "director": "Chris Buck, Ash Brannon",
+        "calificacion": 3,
+        "duracion": "1h 25m",
+        "añoDeLanzamiento": "2007",
         "generoId": 0,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "El surfeo significa todo para el pingüino adolescente Cody Maverick. Él es seguido por un equipo de filmación durante su viaje a la Isla Pen Gu en la Antártica, sede de una competencia internacional de surfeo. Cody quiere ser respetado y admirado, y cree que ganando la competencia logrará lo que desean."
     },
     {
         "id": 6,
-        "nombre": "Adventure Time",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "Monster Inc",
+        "director": "Pete Docter",
+        "calificacion": 4,
+        "duracion": "1h 50m",
+        "añoDeLanzamiento": "2001",
         "generoId": 0,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "Monsters, Incorporated es la fábrica de sustos más grande en el mundo de los monstruos y James P. Sullivan es uno de sus mejores asustadores. Sullivan es un monstruo grande e intimidante de piel azul, grandes manchas color púrpura y cuernos. Su asistente, mejor amigo y compañero de cuarto es Mike."
     },
     {
         "id": 7,
-        "nombre": "Nancy Fancy",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "Ratatouille",
+        "director": "Brad Brid ", 
+        "calificacion": 4,
+        "duracion": "1h 30m",
+        "añoDeLanzamiento": "2007",
         "generoId": 0,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "Remy, un residente de París aprecia la buena comida y tiene un paladar bastante sofisticado. Él desea convertirse en un chef para crear y disfrutar de diversas obras de arte culinarias. El único problema es que Remy es una rata. Y cuando termina en las alcantarillas debajo de uno de los restaurantes más finos de París, el roedor se siente en el lugar perfecto para convertir su sueño en una realidad."
     },
     {
         "id": 8,
-        "nombre": "Gone Girl",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
-        "generoId": 1,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "~/img/img01.jpg"
+        "nombre": "Sherk",
+        "director": "Andrew Adamson, Vicky Jenson",
+        "calificacion": 4,
+        "duracion": "1h 35m",
+        "añoDeLanzamiento": "2001",
+        "generoId": 0,
+        "descripcion": "Había una vez, en un pantano muy lejano, vivía un ogro llamado Shrek (Mike Myers) cuya preciosa soledad se ve súbitamente interrumpida por la invasión de los ruidosos personajes de los cuentos de hadas. Todos fueron expulsados de sus reinos por el malvado Lord Farquaad (John Lithgow). Decidido a salvar su casa, Shrek hace un trato con Farquaad y se prepara para rescatar a la princesa Fiona (Cameron Diaz) para que sea la novia de Farquaad."
     },
     {
         "id": 9,
-        "nombre": "Rain Man",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
-        "generoId": 1,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "nombre": "UP Una Aventura De Altura",
+        "director": "Pete Docter",
+        "calificacion": 4,
+        "duracion": "1h 36m",
+        "añoDeLanzamiento": "2009",
+        "generoId": 0,
+        "descripcion": "Carl Fredricksen es un vendedor de globos de 78 años de edad dispuesto a cumplir su sueño: atar miles de globos a su casa y volar a Sudamérica. Sin embargo, descubre demasiado tarde a un joven e inesperado polizón. Lo que en principio será recelo, acabará por tornarse simpatía hacia el muchacho mientras juntos pasan fascinantes aventuras en exóticos lugares."
     },
     {
         "id": 10,
-        "nombre": "Gone with the wind",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
-        "generoId": 1,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "nombre": "MOANA",
+        "director": "Ron Clements, John Musker",
+        "calificacion": 4,
+        "duracion": "1h 53m",
+        "añoDeLanzamiento": "2016",
+        "generoId": 0,
+        "descripcion": "MOANA Waialiki es una joven entusiasta del mar y la única hija de un jefe marinero. Cuando los marineros de su aldea no pueden pescar ningún pez y todas las cosechas fallan, Vaiana descubre que el semidiós Maui causó el infortunio después de robar el corazón de la diosa Te Fiti. La única manera de salvar el destino de la isla es persuadiendo a Maui para que le devuelva el corazón a Te Fiti. Entonces, Vaiana emprende una arriesgada aventura para salvar a su aldea junto al semidiós Maui."
     },
     {
         "id": 11,
-        "nombre": "Eye Wide Slut",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "SIEMPRE A TU LADO",
+        "director": "Lasse Hallström",
+        "calificacion": 4,
+        "duracion": "1h 33m",
+        "añoDeLanzamiento": "2009",
         "generoId": 1,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "Un perro fiel llamado Hachiko acompaña cada mañana a su amo a la estación de tren y regresa cada tarde para darle la bienvenida después del trabajo. Sin embargo, esta rutina se ve rota por una desgracia."
     },
     {
         "id": 12,
-        "nombre": "La naranja mecanica",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "LO MEJOR DE MI",
+        "director": "Michael Hoffman",
+        "calificacion": 3,
+        "duracion": "1h 58m",
+        "añoDeLanzamiento": "2014",
         "generoId": 1,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "El funeral de un amigo cercano reúne a dos enamorados de la escuela secundaria, quienes descubren que se aman después de 20 años de estar separados."
     },
     {
         "id": 13,
-        "nombre": "Eterno Resplandor de una mente sin recuerdos",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "TITANIC",
+        "director": "James Cameron",
+        "calificacion": 4,
+        "duracion": "3h 15m",
+        "añoDeLanzamiento": "1997",
         "generoId": 1,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural."
     },
     {
         "id": 14,
-        "nombre": "Ragging Bull",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "BAJO LA MISMA ESTRELLA",
+        "director": "Josh Boone",
+        "calificacion": 4,
+        "duracion": "2h 13m",
+        "añoDeLanzamiento": "2014",
         "generoId": 1,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "Dos adolescentes pacientes de cáncer inician un viaje para reafirmar sus vidas y visitar a un escritor solitario en Ámsterdam."
     },
     {
         "id": 15,
-        "nombre": "Mision Imposible",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
-        "generoId": 2,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "~/img/img01.jpg"
+        "nombre": "CAMINO",
+        "director": "Javier Fesser",
+        "calificacion": 3,
+        "duracion": "2h 23m",
+        "añoDeLanzamiento": "2008",
+        "generoId": 1,
+        "descripcion": "Camino, una niña de once años muy religiosa, se enfrenta al mismo tiempo a dos acontecimientos que son completamente nuevos para ella: enamorarse y morir.. El tumor que amenaza su vida hace que su familia, perteneciente al Opus Dei, la animen a encontrar fuerzas a través de la fe."
     },
     {
         "id": 16,
-        "nombre": "Pulp Fiction",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
-        "generoId": 2,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "nombre": "RECUERDAME",
+        "director": "Allen Coulter",
+        "calificacion": 3,
+        "duracion": "2h 08m",
+        "añoDeLanzamiento": "2010",
+        "generoId": 1,
+        "descripcion": "Historia sobre el poder del amor, la fuerza de la familia y la importancia de  vivir apasionadamente y saber apreciar cada momento de tu vida."
     },
     {
         "id": 17,
-        "nombre": "Reservoir Dogs",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
-        "generoId": 2,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
-    },
+        "nombre": "LA ESPIA ROJA",
+        "director": "Trevor Nunn", 
+        "calificacion": 4,
+        "duracion": "1h 43m",
+        "añoDeLanzamiento": "2019",
+        "generoId": 1,
+        "descripcion": "Es el año 2000 y Joan Stanley (Judi Dench) disfruta de su retiro en un barrio residencial durante el cambio de milenio. Su apacible vida se ve súbitamente trastornada cuando es arrestada por el MI5, el Servicio de Inteligencia británico, acusada de proporcionar información a la Rusia comunista, y por ser la espía más longeva del KGB en territorio británico."
+   },
     {
         "id": 18,
-        "nombre": "Kill Bill",
+        "nombre": "LA FORMA DEL AGUA",
+        "director": "Guillermo del Toro",
+        "calificacion": 3,
+        "duracion": "2h 03m",
         "añoDeLanzamiento": "2018",
-        "genero": null,
-        "generoId": 2,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "generoId": 1,
+        "descripcion": "Elisa es una joven muda que se enamora de un hombre anfibio que está recluido en un acuario en un laboratorio secreto, propiedad del Gobierno, en el que ella trabaja limpiando. Llevada por el amor, Elisa trama un plan para liberar al mutante."
     },
     {
         "id": 19,
-        "nombre": "Whiplash",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
-        "generoId": 2,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "nombre": "YO ANTES DE TI ",
+        "director": "Thea Sharrock",
+        "calificacion": 4,
+        "duracion": "1h 51m",
+        "añoDeLanzamiento": "2016" ,
+        "generoId": 1,
+        "descripcion": "La vida de Louisa Clark, una chica alegre y alocada, que va empalmando un trabajo con otro para ayudar a su familia a subsistir, cambia por completo cuando comienza a trabajar como cuidadora de un joven millonario, quien quedó paralítico tras un accidente. Poco a poco, se va estableciendo entre ellos una conexión cada vez más íntima."
     },
     {
         "id": 20,
-        "nombre": "Fight Club",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
-        "generoId": 2,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "nombre": "EL RENACIDO",
+        "director": "Alejandro González Iñárritu",
+        "calificacion": 4,
+        "duracion": "2h 36m",
+        "añoDeLanzamiento": "2016",
+        "generoId": 1,
+        "descripcion": "El trampero Hugh Glass intenta vengarse de sus compañeros, quienes lo abandonaronherido en el bosque después de que lo atacó un oso, pensando que moriría, víctima de las lesiones y de la crudeza del entorno y del invierno. Sin embargo, el rencor que siente es más fuerte que cualquier adversidad, y Glass no permitirá que nada ni nadie le prive de saciar su odio."
     },
     {
         "id": 21,
-        "nombre": "Se7en",
-        "añoDeLanzamiento": "2018",
-        "genero": null,
+        "nombre": "ANT-MAN",
+        "director": "Peyton Reed",
+        "calificacion": 4,
+        "duracion": "1h 58m",
+        "añoDeLanzamiento": "2015",
         "generoId": 2,
-        "descripcion": "Lorem Ipsum Dolor",
-        "urlImagen": "/img/img01.jpg"
+        "descripcion": "Con la habilidad de encogerse de tamaño, pero crecer en fuerza, un estafador debe ayudar a su mentor a proteger el secreto de su traje de hombre hormiga y enfrentar un atraco que salvará al mundo."
+    },
+    {
+        "id": 22,
+        "nombre": "EL MECANICO",
+        "director": "Simon West",
+        "calificacion": 3,
+        "duracion": "1h 33m",
+        "añoDeLanzamiento": "2011",
+        "generoId": 2,
+        "descripcion": "Bishop es un asesino a sueldo de élite con un estricto código de honor. Tras la muerte de su amigo Harry, Bishop toma como aprendiz al hijo de este, Steve."
+    },
+    {
+        "id": 23,
+        "nombre": "EL RESCATE",
+        "director": "Marc Forster",
+        "calificacion": 4,
+        "duracion": "2h 09m",
+        "añoDeLanzamiento": "2011",
+        "generoId": 2,
+        "descripcion": "Sam Childers, un exmotociclista, viaja a África para establecer un orfanato para víctimas jóvenes de la guerra."
+    },
+    {
+        "id": 24,
+        "nombre": "EL EXTRANJERO",
+        "director": "Martin Campbell",
+        "calificacion": 3,
+        "duracion": "2h 56m",
+        "añoDeLanzamiento": "2017",
+        "generoId": 2,
+        "descripcion": "Una bomba colocada por terroristas del IRA asesina a la hija del dueño de un restaurante chino en Londres. El padre, antiguo miembro de las fuerzas especiales chinas, decide no esperar a las autoridades y vengar a su hija por su propia cuenta. Durante su misión entra en contacto con un oficial británico."
+    },
+    {
+        "id":25,
+        "nombre": "LA GRAN MURALLA",
+        "director": "Zhang Yimou",
+        "calificacion": 3,
+        "duracion": "2h 00m",
+        "añoDeLanzamiento": "2016",
+        "generoId": 2,
+        "descripcion": "Encarcelado dentro de la gran muralla de China, un guerrero mercenario une fuerzas con un ejército de élite para luchar contra un ataque de monstruos saqueadores."
+    },
+    {
+        "id": 26,
+        "nombre": "LA ULTIMA OLA",
+        "director": "Roar Uthaug",
+        "calificacion": 4,
+        "duracion": "1h 45m",
+        "añoDeLanzamiento": "2015",
+        "generoId": 2,
+        "descripcion": "Un geólogo noruego y su familia luchan por sobrevivir cuando un deslizamiento de tierra masivo provoca una ola de casi 80 metros de altura."
+    },
+    {
+        "id": 27,
+        "nombre": "NIEVE NEGRA",
+        "director": "Martín Hodara", 
+        "calificacion": 3,
+        "duracion": "1h 30m",
+        "añoDeLanzamiento": "2017",
+        "generoId": 2,
+        "descripcion": "Un hombre vive en un lugar aislado desde que fue acusado de matar accidentalmente a su hermano. Un día recibe la inesperada visita de su otro hermano y de su cuñada para tratar el tema de una herencia."
+   },
+    {
+        "id": 28,
+        "nombre": "OPERACION SOMBRA",
+        "director": "Kenneth Branagh",
+        "calificacion": 2,
+        "duracion": "1h 45m",
+        "añoDeLanzamiento": "2014",
+        "generoId": 2,
+        "descripcion": "El analista de la CIA, Jack Ryan descubre un plan ruso para dañar a la economía de Estados Unidos con un ataque terrorista."
+    },
+    {
+        "id": 29,
+        "nombre": "PANTERA NEGRA",
+        "director": "Ryan Coogler",
+        "calificacion": 4,
+        "duracion": "2h 15m",
+        "añoDeLanzamiento": "2018" ,
+        "generoId": 2,
+        "descripcion": "Después de morir su padre, T'Challa regresa a su nación, Wakanda. Una vez allí, descubre que tiene un nuevo y terrible enemigo, y T'Challa asume la personalidad de Pantera Negra para salvar no solo al reino de Wakanda, sino a toda la humanidad."
+    },
+    {
+        "id": 30,
+        "nombre": "PROYECTO RAMPAGE",
+        "director": "Brad Peyton",
+        "calificacion": 4,
+        "duracion": "1h 55m",
+        "añoDeLanzamiento": "2018",
+        "generoId": 2,
+        "descripcion": "Un gorila, un lobo y una serpiente sufren una mutación genética y se convierten en seres gigantescos y violentos. El primatólogo que cuidaba del gorila y una experta en genética tratan de detenerlos y, al mismo tiempo, evitar que sufran daños."
     }
 ]

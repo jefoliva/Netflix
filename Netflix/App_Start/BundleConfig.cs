@@ -15,6 +15,10 @@ namespace Netflix
                         "~/scripts/typeahead.bundle.js"
                       ));
 
+            bundles.Add(new ScriptBundle("~/bundles/bootbox").Include(
+                        "~/Scripts/bootbox.js"
+                      ));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/bootstrap.js",
@@ -37,8 +41,11 @@ namespace Netflix
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.css",
                       "~/content/typeahead.css",
                       "~/Content/site.css"));
+
+
         }
     }
 }
