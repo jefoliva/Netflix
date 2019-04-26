@@ -12,6 +12,7 @@ namespace Netflix.Models
 {
     public class Datos
     {
+        // Esta lista guarda las tres posibles opciones para genero de la pelicula
         public static Lista<Genero> Generos = new Lista<Genero>
         {
             new Genero() { Id = 0, GeneroNombre = "TV para niños" },
@@ -19,7 +20,8 @@ namespace Netflix.Models
             new Genero() { Id = 2, GeneroNombre = "Accion y aventuras" },
 
         };
-
+        
+        // Una lista doble que contiene todas las peliculas de todos los generos
         public static ListaDoble<Pelicula> peliculas = new ListaDoble<Pelicula>
         {
                new Pelicula { Id = 1, Nombre = "Alvin y las Ardillas", Director = "Tim Hill", Calificacion = 4,
@@ -174,13 +176,19 @@ namespace Netflix.Models
 
         };
 
+        // Listas dobles que contiene las peliculas de acuerdo al genero
         public static ListaDoble<Pelicula> tvniños = Datos.FiltarPorGeneroId(0, peliculas);
         public static ListaDoble<Pelicula> drama = Datos.FiltarPorGeneroId(1, peliculas);
         public static ListaDoble<Pelicula> accionyaventuras = Datos.FiltarPorGeneroId(2, peliculas);
+
+        // Cola de peliculas para MiLista
         public static Cola<Pelicula> miLista = new Cola<Pelicula>();
+
+        // Pila de peliculas para Continuar Viendo
         public static Pila<Pelicula> continuarViendo = new Pila<Pelicula>();
 
-        public static ListaDoble<Pelicula> FiltarPorGeneroId(int id, ListaDoble<Pelicula> lista)
+        // Helper method usado para filtrar las peliculas de acuerdo al id del genero
+        private static ListaDoble<Pelicula> FiltarPorGeneroId(int id, ListaDoble<Pelicula> lista)
         {
             ListaDoble<Pelicula> resultado = new ListaDoble<Pelicula>();
 
@@ -189,15 +197,7 @@ namespace Netflix.Models
                 if (pelicula.GeneroId == id)
                     resultado.Agregar(pelicula);
             }
-
             return resultado;
-        }
-        
-        public static ListaDoble<Pelicula> GetData()
-        {
-
-            string file = File.ReadAllText(@"..\Data\data.json");
-            return JsonConvert.DeserializeObject<ListaDoble<Pelicula>>(file);
         }
     }
 }

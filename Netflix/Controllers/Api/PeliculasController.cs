@@ -11,6 +11,7 @@ namespace Netflix.Controllers.Api
     public class PeliculasController : ApiController
     {
         // GET: api/peliculas
+        [HttpGet]
         public IHttpActionResult GetPeliculas(string query = null)
         {
             IEnumerable<Pelicula> peliculasQuery = Datos.peliculas;

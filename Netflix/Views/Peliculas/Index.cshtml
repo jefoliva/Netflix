@@ -10,7 +10,7 @@
 
     <div class="container-fluid categorias pl-4 pr-4">
         
-
+        <!-- Boton para agregar peliculas -->
         @Html.ActionLink("Agregar Pelicula", "Nueva", null, new { @class = "btn btn-outline-light btn-lg mb-4" })
 
 
@@ -166,135 +166,9 @@
             </div>
             </section>
             <!-- Fin Continuar Viendo -->
-
-
         </div>
 @section scripts {
-    <script>
-        window.onload = function () {
-            function MouseWheelHandler(e, element) {
-                var delta = 0;
-                if (typeof e === 'number') {
-                    delta = e;
-                } else {
-                    if (e.deltaX !== 0) {
-                        delta = e.deltaX;
-                    } else {
-                        delta = e.deltaY;
-                    }
-                    e.preventDefault();
-                }
 
-                element.scrollLeft -= (delta);
+    @Scripts.Render("~/bundles/carousel")
 
-            }
-            var tvniños = {};
-            var drama = {};
-            var accionyaventuras = {};
-            
-            /* function setEvents(el, id) {
-                el.e = document.getElementById('carousel-' + id);
-                el.items = document.getElementById('carousel-items-' + id);
-                el.leftScroll = document.getElementById('left-scroll-button-' + id);
-                el.rightScroll = document.getElementById('right-scroll-button-' + id);
-                el.items.addEventListener("mousewheel", function (e) { handleMouse(e, el); }, false);
-                el.items.addEventListener("scroll", function (e) { scrollEvent(e, el); }, false);
-                el.leftScroll.addEventListener("click", function (e) { leftScrollClick(e, el); }, false);
-                el.rightScroll.addEventListener("click", function (e) { rightScrollClick(e, el); }, false);
-                setLeftScrollOpacity(el);
-                setRightScrollOpacity(el);
-            }
-            setEvents(tvniños, 1);
-            setEvents(drama, 2);
-            setEvents(accionyaventuras, 3); */
-
-            var carousel = {};
-            tvniños.e = document.getElementById('carousel-1');
-            tvniños.items = document.getElementById('carousel-items-1');
-            tvniños.leftScroll = document.getElementById('left-scroll-button-1');
-            tvniños.rightScroll = document.getElementById('right-scroll-button-1');
-            tvniños.items.addEventListener("mousewheel", function (e) { handleMouse(e, tvniños); }, false);
-            tvniños.items.addEventListener("scroll", function (e) { scrollEvent(e, tvniños); }, false);
-            tvniños.leftScroll.addEventListener("click", function (e) { leftScrollClick(e, tvniños); }, false);
-            tvniños.rightScroll.addEventListener("click", function (e) { rightScrollClick(e, tvniños); }, false);
-            setLeftScrollOpacity(tvniños);
-            setRightScrollOpacity(tvniños);
-
-
-            drama.e = document.getElementById('carousel-2');
-            drama.items = document.getElementById('carousel-items-2');
-            drama.leftScroll = document.getElementById('left-scroll-button-2');
-            drama.rightScroll = document.getElementById('right-scroll-button-2');
-            drama.items.addEventListener("mousewheel", function (e) { handleMouse(e, drama); }, false);
-            drama.items.addEventListener("scroll", function (e) { scrollEvent(e, drama); }, false);
-            drama.leftScroll.addEventListener("click", function (e) { leftScrollClick(e, drama); }, false);
-            drama.rightScroll.addEventListener("click", function (e) { rightScrollClick(e, drama); }, false);
-            setLeftScrollOpacity(drama);
-            setRightScrollOpacity(drama);
-
-            accionyaventuras.e = document.getElementById('carousel-3');
-            accionyaventuras.items = document.getElementById('carousel-items-3');
-            accionyaventuras.leftScroll = document.getElementById('left-scroll-button-3');
-            accionyaventuras.rightScroll = document.getElementById('right-scroll-button-3');
-            accionyaventuras.items.addEventListener("mousewheel", function (e) { handleMouse(e, accionyaventuras); }, false);
-            accionyaventuras.items.addEventListener("scroll", function (e) { scrollEvent(e, accionyaventuras); }, false);
-            accionyaventuras.leftScroll.addEventListener("click", function (e) { leftScrollClick(e, accionyaventuras); }, false);
-            accionyaventuras.rightScroll.addEventListener("click", function (e) { rightScrollClick(e, accionyaventuras); }, false);
-            setLeftScrollOpacity(accionyaventuras);
-            setRightScrollOpacity(accionyaventuras);    
-
-            function handleMouse(e, element) {
-                MouseWheelHandler(e, element.items);
-            }
-
-            function leftScrollClick(element) {
-                MouseWheelHandler(100, element.items);
-            }
-
-            function rightScrollClick(element) {
-                MouseWheelHandler(-100, element.items);
-            }
-
-            function scrollEvent(e, element) {
-                setLeftScrollOpacity(element);
-                setRightScrollOpacity(element);
-            }
-
-            function setLeftScrollOpacity(element) {
-                if (isScrolledAllLeft(element)) {
-                    element.leftScroll.style.opacity = 0;
-                } else {
-                    element.leftScroll.style.opacity = 1;
-                }
-            }
-
-            function isScrolledAllLeft(element) {
-                if (element.items.scrollLeft === 0) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-
-            function isScrolledAllRight(element) {
-                if (element.items.scrollWidth > element.items.offsetWidth) {
-                    if (element.items.scrollLeft + element.items.offsetWidth === element.items.scrollWidth) {
-                        return true;
-                    }
-                } else {
-                    return true;
-                }
-
-                return false;
-            }
-
-            function setRightScrollOpacity(element) {
-                if (isScrolledAllRight(element)) {
-                    element.rightScroll.style.opacity = 0;
-                } else {
-                    element.rightScroll.style.opacity = 1;
-                }
-            }
-        }
-    </script>
 }

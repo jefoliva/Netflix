@@ -5,6 +5,7 @@
 
 .typeahead {
   background-color: #fff;
+  
 }
 
 .typeahead:focus {
@@ -23,6 +24,7 @@
 }
 
 div.tt-menu {
+  z-index: 900 !important;
   color: white;
   width: 422px;
   margin: 12px 0;

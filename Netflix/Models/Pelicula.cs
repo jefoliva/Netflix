@@ -8,8 +8,6 @@ namespace Netflix.Models
 {
     public class Pelicula
     {
-        // public enum TiposDeGenero { TvParaNiños, Drama, AccionYAventuras }
-
         public int Id { get; set; }
 
         [Required]
@@ -36,6 +34,7 @@ namespace Netflix.Models
         public string Descripcion { get; set; }
 
         public string PortadaURL { get; set; }
+
         public string FondoURL { get; set; }
 
         public string GetGenero()

@@ -11,9 +11,8 @@ namespace Netflix.Controllers
 {
     public class PeliculasController : Controller
     {
-        
 
-        // GET: Peliculas
+        // GET: /Peliculas/
         public ActionResult Index()
         {
 
@@ -29,6 +28,25 @@ namespace Netflix.Controllers
             return View(viewModel);
         }
 
+        // /Peliculas/Reproducir/id
+        public ActionResult Reproducir(int id)
+        {
+            var pelicula = Datos.peliculas.SingleOrDefault(p => p.Id == id);
+
+            if (pelicula == null)
+                return HttpNotFound();
+
+            var viewModel = new ReproducirViewModel
+            {
+                Pelicula = pelicula,
+                EstaEnMiLista = Datos.miLista.Any(p => p.Id == pelicula.Id),
+                EstaContinuarViendo = Datos.continuarViendo.Any(p => p.Id == pelicula.Id)
+            };
+
+            return View(viewModel);
+        }
+
+        // /Peliculas/Nueva
         public ActionResult Nueva()
         {
             var viewModel = new PeliculasFormViewModel
@@ -39,6 +57,7 @@ namespace Netflix.Controllers
             return View("PeliculasForm", viewModel);
         }
 
+        // POST: /Peliculas/Guardar/
         [HttpPost]
         public ActionResult Guardar(Pelicula pelicula)
         {
@@ -69,76 +88,7 @@ namespace Netflix.Controllers
             return RedirectToAction("Index", "Peliculas");
         }
 
-        public ActionResult AgregarMiLista(int id)
-        {
-            var pelicula = Datos.peliculas.Single(p => p.Id == id);
-
-            Datos.miLista.Enqueue(pelicula);
-
-            var viewModel = new ReproducirViewModel
-            {
-                Pelicula = pelicula,
-                EstaEnMiLista = true
-            };
-
-            return RedirectToAction("Reproducir", "Peliculas", new { Id = id });
-        }
-
-        public ActionResult VerDeMiLista()
-        {
-            var pelicula = Datos.miLista.Dequeue();
-
-            return RedirectToAction("Reproducir", new { Id = pelicula.Id} );
-        }
-
-        public ActionResult PushContinuarViendo(int id)
-        {
-            var pelicula = Datos.peliculas.Single(p => p.Id == id);
-
-            Datos.continuarViendo.Push(pelicula);
-
-            var viewModel = new ReproducirViewModel
-            {
-                Pelicula = pelicula,
-                EstaContinuarViendo = true,
-            };
-
-            return View("Reproducir", viewModel);
-        }
-
-        public ActionResult PopContinuarViendo()
-        {
-            // DELETE: peliculas/PushContinuarViendo/id
-            var peliculaPop = Datos.continuarViendo.Pop();
-            return RedirectToAction("Reproducir", new { Id = peliculaPop.Id });
-        }
-
-        public ActionResult ContinuarViendo(int id)
-        {
-            var pelicula = Datos.continuarViendo.SingleOrDefault(p => p.Id == id);
-
-            if(pelicula == null)
-            {
-                Datos.continuarViendo.Pop();
-                return RedirectToAction("Reproducir", new { Id = pelicula.Id });
-            }
-
-            Datos.continuarViendo.Push(pelicula);
-
-            var viewModel = new ReproducirViewModel
-            {
-                Pelicula = pelicula,
-                EstaContinuarViendo = true,
-            };
-
-            return View("Reproducir", viewModel);
-        }
-
-        public ActionResult Finalizar()
-        {
-            return RedirectToAction("Index");
-        }
-
+        // DELETE: /Peliculas/Eliminar/id
         [HttpDelete]
         public ActionResult Eliminar(int id)
         {
@@ -156,23 +106,50 @@ namespace Netflix.Controllers
             return RedirectToAction("Index", "Peliculas");
         }
 
-        public ActionResult Reproducir(int id)
+        //  /Peliculas/AgreagarMiLista/id
+        public ActionResult AgregarMiLista(int id)
         {
-            var pelicula = Datos.peliculas.SingleOrDefault(p => p.Id == id);
+            var pelicula = Datos.peliculas.Single(p => p.Id == id);
 
-            if (pelicula == null)
-                return HttpNotFound();
+            Datos.miLista.Enqueue(pelicula);
 
             var viewModel = new ReproducirViewModel
             {
                 Pelicula = pelicula,
-                EstaEnMiLista = Datos.miLista.Any(p => p.Id == pelicula.Id),
-                EstaContinuarViendo = Datos.continuarViendo.Any(p => p.Id == pelicula.Id)
+                EstaEnMiLista = true
             };
 
-            return View(viewModel);
+            return RedirectToAction("Reproducir", "Peliculas", new { Id = id });
         }
 
+        // DELETE: /Peliculas/VerDeMiLista/
+        public ActionResult VerDeMiLista()
+        {
+            var pelicula = Datos.miLista.Dequeue();
+            return RedirectToAction("Reproducir", new { Id = pelicula.Id} );
+        }
 
+        // /Peliculas/PushContinuarViendo/id
+        public ActionResult PushContinuarViendo(int id)
+        {
+            var pelicula = Datos.peliculas.Single(p => p.Id == id);
+
+            Datos.continuarViendo.Push(pelicula);
+
+            var viewModel = new ReproducirViewModel
+            {
+                Pelicula = pelicula,
+                EstaContinuarViendo = true,
+            };
+
+            return View("Reproducir", viewModel);
+        }
+
+        // DELETE: peliculas/PushContinuarViendo/
+        public ActionResult PopContinuarViendo()
+        {
+            var peliculaPop = Datos.continuarViendo.Pop();
+            return RedirectToAction("Reproducir", new { Id = peliculaPop.Id });
+        }
     }
 }

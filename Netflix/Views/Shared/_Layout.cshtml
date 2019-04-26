@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Netflix @ViewBag.Title</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700" rel="stylesheet">
     @Styles.Render("~/Content/css")
@@ -64,8 +64,6 @@
                 }
             });
 
-            var items = [];
-
             $('#my_search').typeahead({
                 highlight: true
             },
@@ -75,7 +73,6 @@
                 source: peliculas.ttAdapter(),
                 templates: {
                     suggestion: function (item) {
-                        items.push(item);
                         return `<div><a id="${item.id}"class="sugerencia" href=/Peliculas/Reproducir/${item.id}>
                                 <img src="${item.portadaURL}" width="30">
                                 <span class="pl-2"> ${item.nombre} - ${item.añoDeLanzamiento}</span>
