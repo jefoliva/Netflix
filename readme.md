@@ -25,23 +25,23 @@ Estructuras de datos usadas en el proyecto:
 ## Vista General
 Las tres primeras categorias (TV para niños, Drama, Acción y aventuras) almacenan películas dentro de una lista doblemente enlazada.
 
-![Vista General](/https://github.com/jefoliva/Netflix/tree/master/Netflix/img/screens/screen_001.jpg) 
+![Vista General](screens/screen_001.jpg) 
 
 ## Ver Pelicula
-![Ver Peliculas](https://github.com/jefoliva/Netflix/tree/master/Netflix/img/screens/screen_003.jpg)
+![Ver Peliculasscreens](screens/screen_003.jpg)
 
 ## Buscar pelicula
 Esta opción permite buscar peliculas de forma dinámica mediante la función de autocompletado. Además, muestra las películas que coinciden con el texto ingresado.
 
-![](./https://github.com/jefoliva/Netflix/tree/master/Netflix/img/screens/screen_002.jpg)
+![](screens/screen_002.jpg)
 
 ## Agregar película
 Permite agregar una película a la categoria que corresponda.
 
-![](./https://github.com/jefoliva/Netflix/tree/master/Netflix/img/screens/screen_006.jpg)
+![](screens/screen_006.jpg)
 
 ## Eliminar película
-![](./https://github.com/jefoliva/Netflix/tree/master/Netflix/img/screens/screen_004.jpg)
+![](screens/screen_004.jpg)
 
 ## Mi Lista y Continuar Viendo
-![](./https://github.com/jefoliva/Netflix/tree/master/Netflix/img/screens/screen_005.jpg)
+![](screens/screen_005.jpg)
