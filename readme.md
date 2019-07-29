@@ -25,10 +25,10 @@ Estructuras de datos usadas en el proyecto:
 ## Vista General
 Las tres primeras categorias (TV para niños, Drama, Acción y aventuras) almacenan películas dentro de una lista doblemente enlazada.
 
-![](./Netflix/img/screens/screen_001.jpg) 
+![Vista General](/Netflix/img/screens/screen_001.jpg) 
 
 ## Ver Pelicula
-![](./Netflix/img/screens/screen_003.jpg)
+![Ver Peliculas](Netflix/img/screens/screen_003.jpg)
 
 ## Buscar pelicula
 Esta opción permite buscar peliculas de forma dinámica mediante la función de autocompletado. Además, muestra las películas que coinciden con el texto ingresado.
