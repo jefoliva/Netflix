@@ -25,23 +25,23 @@ Estructuras de datos usadas en el proyecto:
 ## Vista General
 Las tres primeras categorias (TV para niños, Drama, Acción y aventuras) almacenan películas dentro de una lista doblemente enlazada.
 
-![Vista General](screens/screen_001.jpg) 
+![Vista General](screens/screen_001.JPG "") 
 
 ## Ver Pelicula
-![Ver Peliculasscreens](screens/screen_003.jpg)
+![Ver Peliculasscreens](screens/screen_003.JPG "")
 
 ## Buscar pelicula
 Esta opción permite buscar peliculas de forma dinámica mediante la función de autocompletado. Además, muestra las películas que coinciden con el texto ingresado.
 
-![](screens/screen_002.jpg)
+![](screens/screen_002.JPG "")
 
 ## Agregar película
 Permite agregar una película a la categoria que corresponda.
 
-![](screens/screen_006.jpg)
+![](screens/screen_006.JPG "")
 
 ## Eliminar película
-![](screens/screen_004.jpg)
+![](screens/screen_004.JPG "")
 
 ## Mi Lista y Continuar Viendo
-![](screens/screen_005.jpg)
+![](screens/screen_005.JPG "")
